@@ -9,7 +9,6 @@ username: "domdfcoding"
 license: 'BSD'
 short_desc: 'PEP 561 based Type information for webcolors.'
 
-
 enable_conda: False
 enable_docs: False
 
@@ -23,7 +22,6 @@ python_versions:
   - '3.9'
   - '3.10-dev'
   - 'pypy3'
-
 
 classifiers:
   - 'Development Status :: 4 - Beta'
