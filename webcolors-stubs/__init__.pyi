@@ -104,6 +104,6 @@ def rgb_percent_to_rgb(rgb_percent_triplet: PercentTuple) -> IntegerRGB: ...
 # HTML5 color algorithms.
 #################################################################
 
-def html5_parse_simple_color(input: str) -> HTML5SimpleColor: ...  # noqa: A002
+def html5_parse_simple_color(input: str) -> HTML5SimpleColor: ...  # noqa: A002  # pylint: disable=redefined-builtin
 def html5_serialize_simple_color(simple_color: IntTuple) -> str: ...
-def html5_parse_legacy_color(input: str) -> HTML5SimpleColor: ...  # noqa: A002
+def html5_parse_legacy_color(input: str) -> HTML5SimpleColor: ...  # noqa: A002  # pylint: disable=redefined-builtin
