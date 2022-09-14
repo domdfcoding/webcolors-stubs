@@ -23,7 +23,7 @@ webcolors-stubs
 	* - Activity
 	  - |commits-latest| |commits-since| |maintained| |pypi-downloads|
 	* - QA
-	  - |codefactor| |actions_flake8| |actions_mypy| |pre_commit_ci|
+	  - |codefactor| |actions_flake8| |actions_mypy|
 	* - Other
 	  - |license| |language| |requires|
 
@@ -47,8 +47,8 @@ webcolors-stubs
 	:target: https://github.com/domdfcoding/webcolors-stubs/actions?query=workflow%3A%22mypy%22
 	:alt: mypy status
 
-.. |requires| image:: https://requires.io/github/domdfcoding/webcolors-stubs/requirements.svg?branch=master
-	:target: https://requires.io/github/domdfcoding/webcolors-stubs/requirements/?branch=master
+.. |requires| image:: https://dependency-dash.repo-helper.uk/github/domdfcoding/webcolors-stubs/badge.svg
+	:target: https://dependency-dash.repo-helper.uk/github/domdfcoding/webcolors-stubs/
 	:alt: Requirements Status
 
 .. |codefactor| image:: https://img.shields.io/codefactor/grade/github/domdfcoding/webcolors-stubs?logo=codefactor
@@ -86,16 +86,12 @@ webcolors-stubs
 	:target: https://github.com/domdfcoding/webcolors-stubs/commit/master
 	:alt: GitHub last commit
 
-.. |maintained| image:: https://img.shields.io/maintenance/yes/2021
+.. |maintained| image:: https://img.shields.io/maintenance/yes/2022
 	:alt: Maintenance
 
 .. |pypi-downloads| image:: https://img.shields.io/pypi/dm/webcolors-stubs
 	:target: https://pypi.org/project/webcolors-stubs/
 	:alt: PyPI - Downloads
-
-.. |pre_commit_ci| image:: https://results.pre-commit.ci/badge/github/domdfcoding/webcolors-stubs/master.svg
-	:target: https://results.pre-commit.ci/latest/github/domdfcoding/webcolors-stubs/master
-	:alt: pre-commit.ci status
 
 .. end shields
 
