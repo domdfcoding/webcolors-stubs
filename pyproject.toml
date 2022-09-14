@@ -21,6 +21,7 @@ classifiers = [
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
     "Topic :: Utilities",
@@ -53,8 +54,8 @@ base-classifiers = [
     "Operating System :: OS Independent",
     "Topic :: Utilities",
 ]
-python-versions = [ "3.6", "3.7", "3.8", "3.9",]
-python-implementations = [ "CPython",]
+python-versions = [ "3.6", "3.7", "3.8", "3.9", "3.10",]
+python-implementations = [ "CPython", "PyPy",]
 platforms = [ "Windows", "macOS", "Linux",]
 license-key = "BSD-3-Clause"
 package = "webcolors-stubs"
