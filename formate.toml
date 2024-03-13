@@ -45,4 +45,4 @@ known_third_party = [
     "pytest_timeout",
     "requests",
 ]
-known_first_party = "webcolors"
+known_first_party = [ "webcolors",]
