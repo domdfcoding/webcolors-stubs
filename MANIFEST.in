@@ -1,5 +1,0 @@
-include LICENSE
-include requirements.txt
-prune **/__pycache__
-recursive-include webcolors-stubs *.pyi
-include webcolors-stubs/py.typed

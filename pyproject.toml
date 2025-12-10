@@ -1,32 +1,14 @@
 [build-system]
-requires = [ "setuptools!=61.*,<=67.1.0,>=40.6.0", "wheel>=0.34.2",]
-build-backend = "setuptools.build_meta"
+requires = [ "whey",]
+build-backend = "whey"
 
 [project]
 name = "webcolors-stubs"
 version = "0.0.4"
 description = "PEP 561 based Type information for webcolors."
 readme = "README.rst"
-requires-python = ">=3.6.1"
 keywords = [ "css", "type-stubs", "webcolors",]
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Environment :: Web Environment",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: BSD License",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: Implementation :: CPython",
-    "Programming Language :: Python :: Implementation :: PyPy",
-    "Topic :: Utilities",
-]
-dynamic = [ "dependencies",]
+dynamic = [ "requires-python", "classifiers", "dependencies",]
 
 [project.license]
 file = "LICENSE"
