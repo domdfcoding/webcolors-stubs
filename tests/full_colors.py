@@ -25,19 +25,20 @@ returns the original integer values, for consistency.
 
 """
 # stdlib
+from typing import Iterator, Tuple
 import unittest
 
 # this package
 import webcolors
 
 
-def hex_colors():
+def hex_colors() -> Iterator[str]:
 	HEX_TEMPLATE = "#%06x"
 	for i in range(16777217):
 		yield HEX_TEMPLATE % i
 
 
-def int_colors():
+def int_colors() -> Iterator[Tuple[int, int, int]]:
 	red_counter = tuple(range(256))
 	green_counter = tuple(range(256))
 	blue_counter = tuple(range(256))

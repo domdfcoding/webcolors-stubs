@@ -24,7 +24,7 @@ class HTML4DefinitionTests(unittest.TestCase):
 
 	"""
 
-	def setUp(self):
+	def setUp(self) -> None:
 		self.html4_colors = {}
 		soup = BeautifulSoup(
 				requests.get("http://www.w3.org/TR/html401/types.html").content,
@@ -36,7 +36,7 @@ class HTML4DefinitionTests(unittest.TestCase):
 				color_name, color_value = td.text.split(" = ")
 				self.html4_colors[color_name] = color_value.replace('"', '').strip()
 
-	def test_color_definitions(self):
+	def test_color_definitions(self) -> None:
 		for color_name, color_value in self.html4_colors.items():
 			extracted = webcolors.HTML4_NAMES_TO_HEX[color_name.lower()]
 			assert color_value.lower() == extracted
@@ -50,7 +50,7 @@ class CSS21DefinitionTests(unittest.TestCase):
 
 	"""
 
-	def setUp(self):
+	def setUp(self) -> None:
 		self.color_matching_re = re.compile(r"^([a-z]+) (#[a-fA-F0-9]{6})$")
 		self.css21_colors = {}
 		soup = BeautifulSoup(
@@ -78,7 +78,7 @@ class CSS3DefinitionTests(unittest.TestCase):
 
 	"""
 
-	def setUp(self):
+	def setUp(self) -> None:
 		self.css3_colors = {}
 		soup = BeautifulSoup(requests.get("http://www.w3.org/TR/css3-color/").content, "html5lib")
 		color_table = soup.findAll("table", attrs={"class": "colortable"})[1]
