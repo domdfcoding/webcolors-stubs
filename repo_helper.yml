@@ -12,8 +12,6 @@ short_desc: 'PEP 561 based Type information for webcolors.'
 enable_conda: False
 enable_docs: False
 
-python_deploy_version: 3.6
-
 # Versions to run tests for
 python_versions:
   - '3.6'
