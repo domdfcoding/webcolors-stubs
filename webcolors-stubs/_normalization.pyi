@@ -1,0 +1,9 @@
+# this package
+from ._types import IntegerRGB as IntegerRGB
+from ._types import IntTuple as IntTuple
+from ._types import PercentRGB as PercentRGB
+from ._types import PercentTuple as PercentTuple
+
+def normalize_hex(hex_value: str) -> str: ...
+def normalize_integer_triplet(rgb_triplet: IntTuple) -> IntegerRGB: ...
+def normalize_percent_triplet(rgb_triplet: PercentTuple) -> PercentRGB: ...

@@ -5,106 +5,63 @@
 # Copyright (c) 2008-2020, James Bennett
 # BSD Licensed
 
-# stdlib
-from typing import Dict, List, NamedTuple, Pattern, Tuple, Union
+# this package
+from ._conversion import hex_to_name as hex_to_name
+from ._conversion import hex_to_rgb as hex_to_rgb
+from ._conversion import hex_to_rgb_percent as hex_to_rgb_percent
+from ._conversion import name_to_hex as name_to_hex
+from ._conversion import name_to_rgb as name_to_rgb
+from ._conversion import name_to_rgb_percent as name_to_rgb_percent
+from ._conversion import rgb_percent_to_hex as rgb_percent_to_hex
+from ._conversion import rgb_percent_to_name as rgb_percent_to_name
+from ._conversion import rgb_percent_to_rgb as rgb_percent_to_rgb
+from ._conversion import rgb_to_hex as rgb_to_hex
+from ._conversion import rgb_to_name as rgb_to_name
+from ._conversion import rgb_to_rgb_percent as rgb_to_rgb_percent
+from ._definitions import CSS2 as CSS2
+from ._definitions import CSS3 as CSS3
+from ._definitions import CSS21 as CSS21
+from ._definitions import HTML4 as HTML4
+from ._definitions import names as names
+from ._html5 import html5_parse_legacy_color as html5_parse_legacy_color
+from ._html5 import html5_parse_simple_color as html5_parse_simple_color
+from ._html5 import html5_serialize_simple_color as html5_serialize_simple_color
+from ._normalization import normalize_hex as normalize_hex
+from ._normalization import normalize_integer_triplet as normalize_integer_triplet
+from ._normalization import normalize_percent_triplet as normalize_percent_triplet
+from ._types import HTML5SimpleColor as HTML5SimpleColor
+from ._types import IntegerRGB as IntegerRGB
+from ._types import IntTuple as IntTuple
+from ._types import PercentRGB as PercentRGB
+from ._types import PercentTuple as PercentTuple
 
-__version__: str
-__all__: List[str]
-
-def _reversedict(d: Dict) -> Dict: ...
-
-HEX_COLOR_RE: Pattern[str]
-
-HTML4: str = ...
-CSS2: str = ...
-CSS21: str = ...
-CSS3: str = ...
-
-SUPPORTED_SPECIFICATIONS: Tuple[str, str, str, str] = ...
-
-SPECIFICATION_ERROR_TEMPLATE: str
-
-class IntegerRGB(NamedTuple):
-	red: int
-	green: int
-	blue: int
-
-class PercentRGB(NamedTuple):
-	red: str
-	green: str
-	blue: str
-
-class HTML5SimpleColor(NamedTuple):
-	red: int
-	green: int
-	blue: int
-
-IntTuple = Union[IntegerRGB, HTML5SimpleColor, Tuple[int, int, int]]
-PercentTuple = Union[PercentRGB, Tuple[str, str, str]]
-
-# Mappings of color names to normalized hexadecimal color values.
-#################################################################
-
-HTML4_NAMES_TO_HEX: Dict[str, str]
-
-# CSS 2 used the same list as HTML 4.
-CSS2_NAMES_TO_HEX: Dict[str, str]
-
-# CSS 2.1 added orange.
-CSS21_NAMES_TO_HEX: Dict[str, str]
-
-# The CSS 3/SVG named colors.
-CSS3_NAMES_TO_HEX: Dict[str, str]
-
-# Mappings of normalized hexadecimal color values to color names.
-#################################################################
-
-HTML4_HEX_TO_NAMES: Dict[str, str]
-CSS2_HEX_TO_NAMES: Dict[str, str]
-CSS21_HEX_TO_NAMES: Dict[str, str]
-CSS3_HEX_TO_NAMES: Dict[str, str]
-
-# Normalization functions.
-#################################################################
-
-def normalize_hex(hex_value: str) -> str: ...
-def _normalize_integer_rgb(value: int) -> int: ...
-def normalize_integer_triplet(rgb_triplet: IntTuple) -> IntegerRGB: ...
-def _normalize_percent_rgb(value: str) -> str: ...
-def normalize_percent_triplet(rgb_triplet: PercentTuple) -> PercentRGB: ...
-
-# Conversions from color names to various formats.
-#################################################################
-
-def name_to_hex(name: str, spec: str = ...) -> str: ...
-def name_to_rgb(name: str, spec: str = ...) -> IntegerRGB: ...
-def name_to_rgb_percent(name: str, spec: str = ...) -> PercentRGB: ...
-
-# Conversions from hexadecimal color values to various formats.
-#################################################################
-
-def hex_to_name(hex_value: str, spec: str = ...) -> str: ...
-def hex_to_rgb(hex_value: str) -> IntegerRGB: ...
-def hex_to_rgb_percent(hex_value: str) -> PercentRGB: ...
-
-# Conversions from  integer rgb() triplets to various formats.
-#################################################################
-
-def rgb_to_name(rgb_triplet: IntTuple, spec: str = ...) -> str: ...
-def rgb_to_hex(rgb_triplet: IntTuple) -> str: ...
-def rgb_to_rgb_percent(rgb_triplet: IntTuple) -> PercentRGB: ...
-
-# Conversions from percentage rgb() triplets to various formats.
-#################################################################
-
-def rgb_percent_to_name(rgb_percent_triplet: PercentTuple, spec: str = ...) -> str: ...
-def rgb_percent_to_hex(rgb_percent_triplet: PercentTuple) -> str: ...
-def _percent_to_integer(percent: str) -> int: ...
-def rgb_percent_to_rgb(rgb_percent_triplet: PercentTuple) -> IntegerRGB: ...
-
-# HTML5 color algorithms.
-#################################################################
-
-def html5_parse_simple_color(value: str) -> HTML5SimpleColor: ...  # noqa: A002  # pylint: disable=redefined-builtin
-def html5_serialize_simple_color(simple_color: IntTuple) -> str: ...
-def html5_parse_legacy_color(value: str) -> HTML5SimpleColor: ...  # noqa: A002  # pylint: disable=redefined-builtin
+__all__ = [
+		"HTML4",
+		"CSS2",
+		"CSS21",
+		"CSS3",
+		"name_to_hex",
+		"name_to_rgb",
+		"name_to_rgb_percent",
+		"hex_to_name",
+		"hex_to_rgb",
+		"hex_to_rgb_percent",
+		"names",
+		"rgb_to_hex",
+		"rgb_to_name",
+		"rgb_to_rgb_percent",
+		"rgb_percent_to_hex",
+		"rgb_percent_to_name",
+		"rgb_percent_to_rgb",
+		"html5_parse_simple_color",
+		"html5_parse_legacy_color",
+		"html5_serialize_simple_color",
+		"normalize_hex",
+		"normalize_integer_triplet",
+		"normalize_percent_triplet",
+		"IntegerRGB",
+		"PercentRGB",
+		"HTML5SimpleColor",
+		"IntTuple",
+		"PercentTuple"
+		]
