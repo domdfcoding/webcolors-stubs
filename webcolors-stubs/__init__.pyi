@@ -63,5 +63,5 @@ __all__ = [
 		"PercentRGB",
 		"HTML5SimpleColor",
 		"IntTuple",
-		"PercentTuple"
+		"PercentTuple",
 		]
