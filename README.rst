@@ -86,11 +86,11 @@ webcolors-stubs
 	:target: https://github.com/domdfcoding/webcolors-stubs/commit/master
 	:alt: GitHub last commit
 
-.. |maintained| image:: https://img.shields.io/maintenance/yes/2025
+.. |maintained| image:: https://img.shields.io/maintenance/yes/2026
 	:alt: Maintenance
 
 .. |pypi-downloads| image:: https://img.shields.io/pypi/dm/webcolors-stubs
-	:target: https://pypi.org/project/webcolors-stubs/
+	:target: https://pypistats.org/packages/webcolors-stubs
 	:alt: PyPI - Downloads
 
 .. end shields
